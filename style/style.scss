@@ -1,0 +1,14 @@
+$font-family-sans-serif: "Kumbh Sans", sans-serif;
+
+$primary: #c76538;
+$theme-colors: (
+  "primary": $primary,
+);
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
