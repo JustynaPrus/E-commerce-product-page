@@ -1,13 +1,6 @@
-$font-family-sans-serif: "Kumbh Sans", sans-serif;
-
-$primary-color: hsl(26, 100%, 55%);
-$PaleOrange: hsl(25, 100%, 82%);
-$VeryVarkBlue: hsl(220, 13%, 13%);
-$DarkGrayisBlue: hsl(219, 9%, 45%);
-$GrayishBlue: hsl(220, 14%, 75%);
-$LightGrayisBlue: hsl(223, 64%, 98%);
-$White: hsl(0, 0%, 100%);
-$Black: hsl(0, 0%, 0%);
+@import "carousel";
+@import "variables";
+@import "media";
 
 body,
 .container {
@@ -77,7 +70,22 @@ body,
   background-color: $PaleOrange;
   color: $primary-color;
 }
+
+.btn-checkout {
+  background-color: $primary-color;
+  color: $White;
+  width: 100%;
+  font-weight: 700;
+  &:hover {
+    background-color: $PaleOrange;
+    color: $White;
+  }
+}
+
 .btn-add-to-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $primary-color;
   color: $White;
   padding: 0 60px;
@@ -136,16 +144,19 @@ body,
   display: none;
   font-weight: 700;
   position: absolute;
+  min-height: 200px;
   width: 30%;
-  height: 200px;
   top: -10px;
   right: 0;
   z-index: 1;
   padding: 0 !important;
+  .basket-img {
+    border-radius: 5px;
+    max-width: 45px;
+  }
 }
 
 .carousel {
-  display: none;
   max-width: 40%;
   position: absolute;
   top: 50%;
@@ -153,9 +164,8 @@ body,
   transform: translate(-50%, -50%);
 }
 
-.basket-img {
-  border-radius: 5px;
-  max-width: 45px;
+.icon-delete {
+  cursor: pointer;
 }
 
 /*JS classes: */
@@ -176,4 +186,8 @@ img.border {
 }
 .gallery {
   display: block;
+}
+
+.hide {
+  display: none;
 }

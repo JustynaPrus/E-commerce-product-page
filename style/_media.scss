@@ -1,0 +1,49 @@
+@media (max-width: 800px) {
+  main {
+    padding: 0;
+  }
+  .main-card {
+    padding: 0 !important;
+  }
+  .main-button {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    .e1 {
+      grid-column: 2/3;
+    }
+    .e2 {
+      grid-column: 3/4;
+      text-align: center;
+    }
+    .e3 {
+      grid-column: 4/5;
+    }
+    .btn-add-to-card {
+      grid-column: 1/6;
+      grid-row: 2;
+      margin-top: 20px;
+    }
+  }
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 1;
+    background-color: $White;
+    padding: 15px 0;
+    .nav-item {
+      &:after {
+        bottom: -4px;
+      }
+    }
+  }
+  .basket-card {
+    width: 300px !important;
+    right: 20px !important;
+  }
+}
